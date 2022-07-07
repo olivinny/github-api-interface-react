@@ -32,7 +32,7 @@ function Profile() {
             <span>5</span>
           </div>
           <div>
-            <h4>Starreds</h4>
+            <h4>Starred</h4>
             <span>5</span>
           </div>
         </S.WrapperStatusCount>
