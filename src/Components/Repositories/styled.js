@@ -35,7 +35,7 @@ export const WrapperTab = styled(Tab)`
     z-index: 9999;
   }
 `;
-WrapperTabList.tabsRole = "Tab";
+WrapperTab.tabsRole = "Tab";
 
 export const WrapperTabPanel = styled(TabPanel)`
   display: none;
@@ -47,4 +47,4 @@ export const WrapperTabPanel = styled(TabPanel)`
     display: block;
   }
 `;
-WrapperTabList.tabsRole = "TabPanel";
+WrapperTabPanel.tabsRole = "TabPanel";
