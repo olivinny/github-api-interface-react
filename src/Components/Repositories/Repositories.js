@@ -2,7 +2,7 @@ import React from "react";
 import RepositorieItem from "../Repositorie-Item/Repositorie-Item";
 import * as S from "./styled";
 
-function Repositories() {
+function Repositorie() {
   return (
     <S.WrapperTabs
       selectedTabClassName="is-selected"
@@ -30,4 +30,4 @@ function Repositories() {
   );
 }
 
-export default Repositories;
+export default Repositorie;
