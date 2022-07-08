@@ -1,21 +1,29 @@
 import React from "react";
-import { ResetCss } from "./Global/resetCSS";
+
 import Layout from "./Components/Layout/Layout";
 import Profile from "./Components/Profile/Profile";
-import GithubProvider from "./Providers/github-provider";
 import Repositorie from "./Components/Repositories/Repositories";
+import GithubHook from "./Hooks/githubHook";
 
 function App() {
+  const { githubState } = GithubHook();
   return (
-    <main>
-      <GithubProvider>
-        <ResetCss />
-        <Layout>
-          <Profile />
-          <Repositorie />
-        </Layout>
-      </GithubProvider>
-    </main>
+    <Layout>
+      {githubState.hasUser ? (
+        <>
+          {githubState.loading ? (
+            <p>Loading</p>
+          ) : (
+            <>
+              <Profile />
+              <Repositorie />
+            </>
+          )}
+        </>
+      ) : (
+        <></>
+      )}
+    </Layout>
   );
 }
 

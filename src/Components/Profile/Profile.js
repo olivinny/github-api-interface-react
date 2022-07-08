@@ -7,19 +7,30 @@ function Profile() {
 
   return (
     <S.Wrapper>
-      <S.WrapperImg
-        src="https://avatars.githubusercontent.com/u/106111448?v=4"
-        alt="Profile"
-      />
+      <S.WrapperImg src={githubState.user.avatar} alt="Profile" />
       <S.WrapperInfoUser>
         <div>
           <h1>{githubState.user.name}</h1>
-          <S.WrapperUserName>
+          <S.WrapperUserGeneric>
             <h3>Username: </h3>
             <a href={githubState.user.htmlUrl} target="_blank" rel="noreferrer">
               {githubState.user.login}
             </a>
-          </S.WrapperUserName>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>Company: </h3>
+            <span>{githubState.user.company}</span>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>Location: </h3>
+            <span>{githubState.user.location}</span>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>blog: </h3>
+            <a href={githubState.user.blog} alt="Link para o blog.">
+              {githubState.user.blog}
+            </a>
+          </S.WrapperUserGeneric>
         </div>
         <S.WrapperStatusCount>
           <div>
