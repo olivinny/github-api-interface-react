@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styled";
 import GithubHook from "../../Hooks/githubHook";
+
 function Header() {
   const { getUser } = GithubHook();
   const [usernameForSearch, setUsernameForSearch] = useState();
@@ -14,6 +15,9 @@ function Header() {
         type="text"
         placeholder="Digite o Username para pesquisa..."
         onChange={(event) => setUsernameForSearch(event.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") submitGetUser();
+        }}
       />
       <button onClick={submitGetUser}>Buscar</button>
     </S.Wrapper>

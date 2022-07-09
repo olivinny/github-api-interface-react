@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const WrapperTabs = styled(Tabs)`
   font-size: 12px;
-  width: 50%;
+  width: 100%;
   margin-top: 40px;
 `;
 
@@ -43,8 +43,15 @@ export const WrapperTabPanel = styled(TabPanel)`
   padding: 8px;
   border: 1px solid #ccc;
   margin-top: -1px;
+  border-radius: 0 8px 8px 8px;
   &.is-selected {
     display: block;
   }
 `;
 WrapperTabPanel.tabsRole = "TabPanel";
+
+export const WrapperList = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
